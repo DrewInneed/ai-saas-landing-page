@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-violet-500: theme("colors.violet.500");
+    --color-fuchsia-500: theme("colors.fuchsia.500");
+    --color-amber-400: theme("colors.amber.400");
+    --color-teal-400: theme("colors.teal.400");
+    --color-gray-950: theme("colors.gray.950");
+  }
+
+  .abs-center {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .active-nav {
+    opacity: 1 !important;
+    display: block !important;
+    z-index: 30 !important;
+    pointer-events: all !important;
+  }
+}
